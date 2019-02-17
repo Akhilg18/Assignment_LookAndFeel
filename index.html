@@ -1,1 +1,152 @@
 <!--Your HTML code here-->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <style>
+        body {
+            background-color: #EDF5E1;
+        }
+        .header {
+            margin: 0px;
+            background-color: #4CAF50;
+            padding: 1px;
+        }
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #111;
+        }
+
+            ul.topnav li {
+                float: left;
+            }
+
+                ul.topnav li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                    ul.topnav li a:hover:not(.active) {
+                        background-color: #4CAF50;
+                    }
+
+                    ul.topnav li a.active {
+                        background-color: #333;
+                    }
+
+                ul.topnav li.right {
+                    float: right;
+                }
+        .fit {
+            width: 50%;
+            height: 50%;
+            border:thin;
+        }
+        img{
+            position: absolute;
+            left: 350px;
+            top: 200px;
+        }
+ slide_container{
+     max-width:1000px;
+     position:relative;
+     margin:auto;  
+}
+ .slides{
+     display:none;
+ }
+        .last {
+            cursor: pointer;
+            position: absolute;
+            top: 60%;
+            left:27%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 60%;
+            left: 65%;
+            width: auto;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+            .last:hover, .next:hover {
+                background-color: #4CAF50;
+            }
+
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <h1 style="font-family:Impact;"> Tampa Bay</h1>
+    </div>
+    <ul class="topnav">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#Beaches">Beaches</a></li>
+        <li><a href="#Parks">Parks</a></li>
+        <li class="right"><a href="#about">About</a></li>
+    </ul>
+
+    <div class="slideshow-container">
+        <p id="demo"></p>
+        <div class="slides">
+            <img src="/img/rsz_beach-1966684.jpg" height="400" width="600" />
+        </div>
+        <div class="slides">
+            <img src="/img/rsz_ferris-wheel-2858236.jpg" height="400" width="600" />
+        </div>
+        
+
+        <a class="last" onclick="changeindex(-1)"> &#10094</a>
+        <a class="next" onclick="changeindex(1)"> &#10095</a>
+
+
+
+    </div>
+    <script>
+        var index = 1;
+        displaySlides(index);
+        function changeindex(m) {
+            var r = document.getElementById("demo").innerHTML = "change index function called";
+            index = index + m;
+            displaySlides(index);
+        }
+        function displaySlides(n) {
+            var r = document.getElementById("demo").innerHTML = "display function called";
+            var slides = document.getElementsByClassName("slides");
+            if (index < 1) { index=slides.length }
+            if (index > slides.length) { index = 1;}
+            for (var i = 0; i < slides.length; i++)
+            {
+                slides[i].style.display = "none";
+            }
+
+            slides[index-1].style.display = "block";
+
+
+        }
+    </script>
+</body>
+</html>
