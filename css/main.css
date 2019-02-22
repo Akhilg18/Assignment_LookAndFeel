@@ -4,12 +4,12 @@ Sample css code
 /* Set height to 100% for body and html to enable the background image to cover the whole page: */
 body,
 html {
-  height: 100%;
+    height: 100%;
 }
 
 /*Set background image*/
 .container {
-    background-color:#b6ff00;
+    background-color: #b6ff00;
     height: 100%;
     background-position: center;
     background-size: cover;
@@ -17,31 +17,31 @@ html {
 
 /* Position text in the middle */
 .middle {
-  position: absolute;
-  color: beige;
-  top: 70%;
-  left: 39%;
-  text-align: center;
-  font-size: 25px;
+    position: absolute;
+    color: beige;
+    top: 70%;
+    left: 39%;
+    text-align: center;
+    font-size: 25px;
 }
 
-/*Set circle in unordered list*/
-.middle ul {
-  list-style-type: circle;
-}
+    /*Set circle in unordered list*/
+    .middle ul {
+        list-style-type: circle;
+    }
 
-/*Set text inside li tag to left*/
-.middle ul li {
-  text-align: left !important;
-}
+        /*Set text inside li tag to left*/
+        .middle ul li {
+            text-align: left !important;
+        }
 
-/*Set text color for a tag inside middle class and ul>li element*/
-.middle ul li a {
-  color: beige;
-}
+            /*Set text color for a tag inside middle class and ul>li element*/
+            .middle ul li a {
+                color: beige;
+            }
 
-/*Change text color and decoration for a tags inside middle class and ul>li element*/
-.middle ul li a:hover {
-  color: red;
-  text-decoration: none;
-}
+                /*Change text color and decoration for a tags inside middle class and ul>li element*/
+                .middle ul li a:hover {
+                    color: red;
+                    text-decoration: none;
+                }
