@@ -48,26 +48,25 @@
                     float: right;
                 }
 
-        .fit {
-            width: 50%;
-            height: 50%;
-            border: thin;
-        }
+       
 
-       .slide img {
+
+        .slide_container{
             position: absolute;
-            width: 100%;
-        }
-
-        slide_container {
-            max-width: 1000px;
-            position: relative;
-            margin: auto;
+            width: 60%;
+            left: 20%;
+            right: 20%;
+           
         }
 
         .slides {
-            display: none;
+            width: 100%;
         }
+            .slides img {
+                width: 100%;
+                object-fit: contain;
+                border-radius: 8px;
+            }
 
         .last {
             cursor: pointer;
@@ -116,36 +115,38 @@
         <li class="right"><a href="#about">About</a></li>
     </ul>
 
-    <div class="slideshow-container">
+    <div class="slide_container">
         <p id="demo"></p>
         <div class="slides">
-            <img src="/img/rsz_beach-1966684.jpg" "  />
+            <img src="/img/p-TreasureIsland_54_990x660.jpg">
         </div>
         <div class="slides">
             <img src="/img/rsz_ferris-wheel-2858236.jpg" />
         </div>
 
-        <a class="last" onclick="changeindex(-1)"> &#10094</a>
-        <a class="next" onclick="changeindex(1)"> &#10095</a>
-        //123
+        <!--  <a class="last" onclick="changeindex(-1)"> &#10094</a>
+     <a class="next" onclick="changeindex(1)"> &#10095</a>-->
+
     </div>
     <script>
         var index = 1;
-        displaySlides(index);
+        displaySlides();
         function changeindex(m) {
-            var r = document.getElementById("demo").innerHTML = "change index function called";
+            var r = document.getElementById("demo").innerHTML = "";
             index = index + m;
             displaySlides(index);
         }
-        function displaySlides(n) {
-            var r = document.getElementById("demo").innerHTML = "display function called";
+        function displaySlides() {
+            var r = document.getElementById("demo").innerHTML = "";
             var slides = document.getElementsByClassName("slides");
-            if (index < 1) { index = slides.length }
-            if (index > slides.length) { index = 1; }
+           
             for (var i = 0; i < slides.length; i++) {
                 slides[i].style.display = "none";
             }
+            index++;
+            if (index > slides.length) {index=1}
             slides[index - 1].style.display = "block";
+            setTimeout(displaySlides, 2000);
         }
     </script>
 </body>
