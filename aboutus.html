@@ -1,12 +1,258 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="./css/main.css" />
+
     <title>Document</title>
+    <style>
+        body {
+            background-color: #edf5e1;
+        }
+
+        .header {
+            margin: 0px;
+            background-color: #4caf50;
+            padding: 1px;
+        }
+        
+
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #111;
+        }
+
+            ul.topnav li {
+                float: left;
+            }
+
+                ul.topnav li a {
+                    display: block;
+                    color: white;
+                    text-align: center;
+                    padding: 14px 16px;
+                    text-decoration: none;
+                }
+
+                    ul.topnav li a:hover:not(.active) {
+                        background-color: #4caf50;
+                    }
+
+                    ul.topnav li a.active {
+                        background-color: #333;
+                    }
+
+                ul.topnav li.right {
+                    float: right;
+                }
+
+        .fit {
+            width: 50%;
+            height: 50%;
+            border: thin;
+        }
+
+        slide_container {
+            max-width: 1000px;
+            position: relative;
+            margin: auto;
+        }
+
+        .contentholder {
+            position: absolute;
+            top: 25%;
+            width: 60%;
+            left: 20%;
+            right: 20%;
+        }
+
+        .post {
+            width: 100%;
+        }
+
+            .post img {
+                width: 100%;
+                object-fit: contain;
+                border-radius: 8px;
+            }
+
+        .postheading {
+            font-family: Oswald;
+            color: #4caf50;
+            font-size: 30px;
+            text-align: center;
+        }
+
+        .description {
+            font-family: "Times New Roman", Times, serif;
+        }
+
+        .circle {
+            height: 25px;
+            width: 25px;
+            background-color: #4caf50;
+            border-radius: 50%;
+            display: inline-block;
+            position: absolute;
+            text-align: left;
+            font-size: 25px;
+        }
+
+        .description p {
+            line-height: 1.5;
+        }
+
+        .bold {
+            font-weight: bold;
+            color: blue;
+        }
+    </style>
 </head>
 <body>
+    <div class="header">
+        <h1 style="font-family:Impact;">Tampa Bay</h1>
+    </div>
+    <ul class="topnav">
+        <li><a class="active" href="./index.html">Home</a></li>
+        <li><a href="./beaches.html">Beaches</a></li>
+        <li><a href="#Parks">Parks</a></li>
+        <li class="right"><a href="https://github.com/Akhilg18/Assignment_LookAndFeel"> GitHub</a></li>
+        <li><a href="./aboutus.html">About</a></li>
+    </ul>
+    <div class="slide_container">
+        <div class="contentholder">
+            <div class="post">
+                <div class="postheading">Responsiveness</div>
+                <div class="description">
+                    <p align="justify">
+                        In the field of Web design and development, we’re quickly getting
+                        to the point of being unable to keep up with the endless new
+                        resolutions and devices. For many websites, creating a website
+                        version for each resolution and new device would be impossible, or
+                        at least impractical. For this website to maintain the
+                        responsiveness we have used a couple of techniques.
+                    </p>
+                    <ul>
+                        <li>
+                            using the meta tag
+                            <xmp class="bold">
+                                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                            </xmp>
+                            <p align="justify">
+                                This will set the viewport of your page, which will give the
+                                browser instructions on how to control the page's dimensions
+                                and scaling
+                            </p>
+                        </li>
+                        <li>
+                            using the width property
+                            <xmp class="bold">
+                                <img src="img_girl.jpg" style="width:100%;">
+                            </xmp>
+                            <p align="justify">
+                                If the max-width property is set to 100%, the image will scale
+                                down if it has to, but never scale up to be larger than its
+                                original size
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="post">
+                <div class="postheading">Usability</div>
+                <div class="decsription">
+                    <p align="justify">
+                        Usability is one of the main things that the users are looking for
+                        in a websites. Nobody likes a websites with disturbing colors and
+                        unstructured navigation. so we have used the below techniques to
+                        make a website more usable.
+                    </p>
+                    <ul>
+                        <li>
+                            simple and limited colors
 
+                        </li>
+                        <li>
+                            Header navigation
+                        </li>
+                        <li>simple font</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="post">
+                <div class="postheading">Relevance</div>
+                <div class="decsription">
+                    <p align="justify">
+                        We have collected the content from various sources on web and below are the links of the source.
+
+                    </p>
+                    <h3>Sources :</h3>
+                    <ul>
+                        <li>
+                            <a href="https://en.wikipedia.org/wiki/Tampa_Bay">https://en.wikipedia.org/wiki/Tampa_Bay</a>
+                        </li>
+                        <li>
+                            <a href="https://www.visittampabay.com/things-to-do/tampa-arts-culture/museums/">https://www.visittampabay.com/things-to-do/tampa-arts-culture/museums/</a>
+                        </li>
+                        <li><a href="https://www.tripadvisor.com/Attractions-g34678-Activities-c49-Tampa_Florida.html">https://www.tripadvisor.com/Attractions-g34678-Activities-c49-Tampa_Florida.html</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="post">
+                <div class="postheading">Design</div>
+                <div class="decsription">
+                    <p align="justify">
+                        We have developed the website using following set of guidelines:
+                    </p>
+                    <ul>
+                        <li>
+                            <h3>Modularity</h3>  <p> We have created various small modules like header,navigation,content and combined together to give it a form.</p>
+                        </li>
+                        <li>
+                            <h3>Navigability</h3> 
+                            <p>Navigation bar includes the links to navigate to the vraoius pages in the website.</p>
+                        </li>
+                        <li>
+                            <h3>Simplicity</h3>
+                            <p>We have used the limited and undistracted colors to maintain simplicity.font colors and font weight are given imporatance through out the website.</p>
+                        </li>
+                        <li><h3>Conventionality</h3>
+                            <p>We have the main navigation be at the top of a page. Also we Have links change color/appearance when you hover over them</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="post">
+                <div class="postheading">Self Reflection</div>
+                <div class="decsription">
+                    <p align="justify"></p>
+                    <ul>
+                        <li>
+                            Without using the css libraries like bootstrap, we could get
+                            deep insight of the html and css.
+                        </li>
+                        <li>
+                            Understood how we could make use of the .css for every page
+                            there by reducing the redundancy of code.
+                        </li>
+                        <li>Understood how positioning in html works</li>
+                        <li>
+                            Learnt about the responsive web design and how that could impact
+                            the website development.
+                        </li>
+                        <li>
+                            Learnt to maintain some of the key principles like usability and
+                            simplicity to the website
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

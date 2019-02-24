@@ -6,6 +6,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="./css/main.css">
     <style>
+        
         body {
             background-color: #EDF5E1;
         }
@@ -106,28 +107,60 @@
 
 <body>
     <div class="header">
-        <h1 style="font-family:Impact;"> Tampa Bay</h1>
+        <h1 style="font-family:Impact;"> Tampa Bay Attractions</h1>
     </div>
     <ul class="topnav">
         <li><a class="active" href="#home">Home</a></li>
         <li><a href="./beaches.html">Beaches</a></li>
         <li><a href="./parks.html">Parks</a></li>
-        <li class="right"><a href="#about">About</a></li>
+        <li><a href="./museums.html">Museums</a></li>
+        <li class="right"><a href="https://github.com/Akhilg18/Assignment_LookAndFeel"> GitHub</a></li>
+        <li><a href="./aboutus.html">About</a></li>
     </ul>
 
     <div class="slide_container">
         <p id="demo"></p>
         <div class="slides">
-            <img src="/img/p-TreasureIsland_54_990x660.jpg">
+            <img src="/img/p-beach-clearwater3-.jpg">
         </div>
         <div class="slides">
-            <img src="/img/rsz_ferris-wheel-2858236.jpg" />
+            <img src="/img/dinosaur-world-feature.jpg" />
+        </div>
+        <div class="slides">
+            <img src="/img/MOSI_KIC_Dome_RopesDES.jpg" />
+        </div>
+        <div class="slides">
+            <img src="/img/p-TreasureIsland_54_990x660.jpg" />
+        </div>
+        <div class="slides">
+            <img src="/img/Kumba_exiting_corkscrew.jpg" />
+        </div>
+        <div class="slides">
+            <img src="/img/PlantMuseum.jpg" />
         </div>
 
+        <p>
+            Tampa Bay is a large natural harbor and shallow estuary connected to the Gulf of Mexico on the west central coast of Florida, comprising Hillsborough Bay, McKay Bay, Old Tampa Bay, Middle Tampa Bay, and Lower Tampa Bay. The largest freshwater inflow into the bay is the Hillsborough River, which flows into Hillsborough Bay in downtown Tampa. Many other smaller rivers and streams also flow into Tampa Bay, resulting in a large watershed area.
+        </p>
+        <p>
+            The shores of Tampa Bay was home to the Weedon Island Culture and then the Safety Harbor Culture for thousands of years. These cultures relied heavily on Tampa Bay for food, and the waters were rich enough that they were one of the few Native American cultures that did not have to farm. When the first European explorers arrived in the early 1500s, the Tocobaga was likely the dominate chiefdom in the area. The indigenous population had been decimated by disease and warfare by the late 1600s, and there were no permanent human settlements in the area for over a century. The United States took possession of Florida in 1821 and established Fort Brooke at the mouth of the Hillsborough River in 1824.
+        </p>
+        <h4>
+            Tourism
+        </h4>
+        <p>
+            The city of Tampa operates over 165 parks and beaches covering 2,286 acres (9.25 km2) within city limits; 42 more in surrounding suburbs covering 70,000 acres (280 km2) are maintained by Hillsborough County. These areas include Hillsborough River State Park, just northeast of the city. Tampa is home to a number of attractions and theme parks, including Busch Gardens Tampa, Adventure Island, the Lowry Park Zoo, and the Florida Aquarium.
+ </p><p> The Lowry Park Zoo features over 2,000 animals, interactive exhibits, rides, educational shows and more. The zoo serves as an economic, cultural, environmental and educational anchor in Tampa.
+ Big Cat Rescue is one of the largest accredited sanctuaries in the world dedicated entirely to abused and abandoned big cats. It is home to about 80 lions, tigers, bobcats, cougars and other species, most of whom have been abandoned, abused, orphaned, saved from being turned into fur coats, or retired from performing acts. They have a variety of different tours available.
+        </p>
+
         <!--  <a class="last" onclick="changeindex(-1)"> &#10094</a>
-        <a class="next" onclick="changeindex(1)"> &#10095</a>-->
+    <a class="next" onclick="changeindex(1)"> &#10095</a>-->
 
     </div>
+   
+       
+    
     <script>
         var index = 1;
         displaySlides();
@@ -146,7 +179,7 @@
             index++;
             if (index > slides.length) { index = 1 }
             slides[index - 1].style.display = "block";
-            setTimeout(displaySlides, 2000);
+            setTimeout(displaySlides, 1500);
         }
     </script>
 </body>
